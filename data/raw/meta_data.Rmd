@@ -1,0 +1,52 @@
+---
+title: "meta_data"
+output:
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ape)
+library(knitr)
+mat <- read.csv("raw_data_anuran_call_parameters.csv")
+```
+
+# Files 
+
+1. raw_data_anuran_call_parameters.csv
+2. amph_2014.tre
+
+
+## 1. raw_data_anuran_call_parameters.csv
+
+> __Description:__ Dataset with information on anuran advertisement call for 15 species of monkey tree frogs (Anura: Phyllomedusidae).  
+
+__Variables:__  
+
+* ID_can: Unique call indentifier.
+* ID_ind: Unique individual identifier.
+* ID_pop: Unique population identifier.
+* ID_sp: Unique species identifier.
+* can: Call number.
+* ind: Individual number.
+* pop: Population abbreviated name.
+* sp: Species name.
+* df: Dominant Frequency.
+* ci: Call interval.
+* pn: Number of pulses.
+* pr: Pulse rate.
+* pl: Pulse duration.
+* BS: Individual Body size.
+* TE: Individual temperature.
+* LAT: Latitude of the individual.
+* LONG: Longitude of the individual.
+
+## 2. amph_2014.tre
+
+> __Description:__ Phylogenetic tree with 2871 Amphibia species ^[Pyron, R.A., and Wiens, J.J. 2011. A large-scale phylogeny of Amphibia including over 2800 species, and a revised classification of extant frogs, salamanders, and caecilians. Mol. Phylogenet. Evol. 61(2): 543–583. Elsevier Inc. doi:10.1016/j.ympev.2011.06.012.].  
+
+```{r include = FALSE}
+t <- read.tree(file = "amph_2014.tre")
+plot(t, show.tip.label = FALSE, type = "f")
+```
+
