@@ -99,3 +99,4 @@ mantel_table$level <- "across populations"
 mantel_table
 
 write_csv(x = mantel_table, path = "outputs/tables/Table_mantel_test_populations.csv")  
+
