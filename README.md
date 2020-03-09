@@ -22,7 +22,6 @@ Below you can find the raw data and code to reproduce all analyses included in t
 2. To access the source code for the analysis, see 
 [source code](https://github.com/paternogbc/ms_variability_anuran_call/tree/master/R).
 
-
 ***
 
 When using the __data available__ in this repository, please cite the original publication.  
