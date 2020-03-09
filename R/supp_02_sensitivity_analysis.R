@@ -309,7 +309,7 @@ g1 <- ggplot(table.cv.melt, aes(y=value,x=level,fill=level))+
 
 title <- ggdraw() + 
     draw_label("Sensitivity analysis - Removing species with less than 5 individuals", size = 12)
-gglobal <- plot_grid(title, g1, ncol = 1, rel_heights = c(0.1, 1));gglobal
+gglobal <- cowplot::plot_grid(title, g1, ncol = 1, rel_heights = c(0.1, 1));gglobal
 
 ggsave(filename = "outputs/figures/supp/sensi_cv_less_than_5_ind_cv.pdf", plot = gglobal, 
        width = 180, height = 90, units = 'mm')

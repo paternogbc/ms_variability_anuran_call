@@ -283,8 +283,8 @@ g1 <- ggplot(table.cv.melt, aes(y=value,x=level,fill=level))+
                                           "Intra-species",
                                           "Inter-species")); g1
 
-ggsave(filename = "outputs/figures/multi_level_cv_analysis.pdf", plot = g1, 
+ggsave(filename = "outputs/figures/Figure_multi_level_cv_analysis.pdf", plot = g1, 
        width = 180, height = 90, units = 'mm')
-ggsave(filename = "outputs/figures/multi_level_cv_analysis.pdf", plot = g1, 
+ggsave(filename = "outputs/figures/Figure_multi_level_cv_analysis.png", plot = g1, 
        width = 180, height = 90, units = 'mm')
       

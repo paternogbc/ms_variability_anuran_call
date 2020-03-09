@@ -1,7 +1,7 @@
 Source,r,P_value,level
-Call duration,0.095809615035144,0.1859,across populations
-Dominant frequency,0.06760236156874987,0.3168,across populations
-Number of pulses,0.12993563312833098,0.1123,across populations
-Pulse duration,0.06442599623717006,0.286,across populations
-Pulse rate,0.13656694918604959,0.1347,across populations
-Call interval,0.057771993272740095,0.2536,across populations
+Call duration,0.095809615035144,0.18081918081918083,across populations
+Dominant frequency,0.06760236156874987,0.2907092907092907,across populations
+Number of pulses,0.12993563312833098,0.1088911088911089,across populations
+Pulse duration,0.06442599623717006,0.27172827172827174,across populations
+Pulse rate,0.13656694918604959,0.14285714285714285,across populations
+Call interval,0.057771993272740095,0.23876123876123875,across populations

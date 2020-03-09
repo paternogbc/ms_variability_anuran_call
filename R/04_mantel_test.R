@@ -52,12 +52,12 @@ ci.dists <- dist(med.ind$ci)
 pn.dists <- dist(med.ind$pn)
 
 # Mantel test
-mdur <- mantel.rtest(ind.dists, dur.dists , nrepet = 9999)
-mdf  <- mantel.rtest(ind.dists, df.dists , nrepet = 9999)
-mpn  <- mantel.rtest(ind.dists, pn.dists , nrepet = 9999)
-mpl  <- mantel.rtest(ind.dists, pl.dists , nrepet = 9999)
-mpr  <- mantel.rtest(ind.dists, pr.dists , nrepet = 9999)
-mci  <- mantel.rtest(ind.dists, ci.dists , nrepet = 9999)
+mdur <- mantel.rtest(ind.dists, dur.dists , nrepet = 1000)
+mdf  <- mantel.rtest(ind.dists, df.dists , nrepet = 1000)
+mpn  <- mantel.rtest(ind.dists, pn.dists , nrepet = 1000)
+mpl  <- mantel.rtest(ind.dists, pl.dists , nrepet = 1000)
+mpr  <- mantel.rtest(ind.dists, pr.dists , nrepet = 1000)
+mci  <- mantel.rtest(ind.dists, ci.dists , nrepet = 1000)
 
 # Mantel table
 mantel_table <-
@@ -80,12 +80,12 @@ ci.dists <- dist(med.pop$ci)
 pn.dists <- dist(med.pop$pn)
 
 # Mantel test
-mdur <- mantel.rtest(pop.dists, dur.dists , nrepet = 9999)
-mdf  <- mantel.rtest(pop.dists, df.dists , nrepet = 9999)
-mpn  <- mantel.rtest(pop.dists, pn.dists , nrepet = 9999)
-mpl  <- mantel.rtest(pop.dists, pl.dists , nrepet = 9999)
-mpr  <- mantel.rtest(pop.dists, pr.dists , nrepet = 9999)
-mci  <- mantel.rtest(pop.dists, ci.dists , nrepet = 9999)
+mdur <- mantel.rtest(pop.dists, dur.dists , nrepet = 1000)
+mdf  <- mantel.rtest(pop.dists, df.dists , nrepet = 1000)
+mpn  <- mantel.rtest(pop.dists, pn.dists , nrepet = 1000)
+mpl  <- mantel.rtest(pop.dists, pl.dists , nrepet = 1000)
+mpr  <- mantel.rtest(pop.dists, pr.dists , nrepet = 1000)
+mci  <- mantel.rtest(pop.dists, ci.dists , nrepet = 1000)
 
 # Mantel table
 mantel_table <-

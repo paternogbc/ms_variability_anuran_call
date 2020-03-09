@@ -5,8 +5,6 @@ library(cowplot)
 library(tidyverse)
 library(broom)
 library(lme4)
-library(DHARMa)
-library(sjPlot)
 library(car)
 library(performance)
 
