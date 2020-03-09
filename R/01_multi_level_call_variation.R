@@ -28,7 +28,6 @@ nrow(mat1)
 nrow(mat)
 
 ### 1. Multi-level analysis of variation----------------------------------------
-### 1.1 Removing species with less than 5 individuals---------------------------
 ### Inter-specific variation:---------------------------------------------------
 sap <- mat1
 table <- NULL
@@ -64,7 +63,7 @@ for (j in 1:1000){
 }
 
 ### Intra-specific variation:---------------------------------------------------
-sap <- mat1
+sap <- filter(mat1, !sp %in% c("Phyllomedusa_burmeisteri", "Phyllomedusa_vaillantii")) 
 table <- NULL
 table.cv.4 <- NULL
 
@@ -100,13 +99,13 @@ for (j in 1:1000){
   x <- data.frame(level = "intra_sp" ,cv.dur, cv.df, cv.ci, cv.pn, cv.pr, cv.pl)
   table.cv.4 <- rbind(table.cv.4, x)
   table <- NULL
-  sap <- mat1
+  sap <-  filter(mat1, !sp %in% c("Phyllomedusa_burmeisteri", "Phyllomedusa_vaillantii")) 
   
 }
 
 ### Inter-population------------------------------------------------------------
 # Subset for Phyllomedusa nordestina
-sap <- droplevels(filter(mat,sp=="Phyllomedusa_nordestina" ))
+sap <- droplevels(filter(mat1, sp == "Phyllomedusa_nordestina" ))
 table <- NULL
 table.cv.3 <- NULL
 
@@ -136,13 +135,13 @@ for (j in 1:1000){
   x <- data.frame(level = "inter_pop" ,cv.dur, cv.df, cv.ci, cv.pn, cv.pr, cv.pl)
   table.cv.3 <- rbind(table.cv.3, x)
   table <- NULL
-  sap <- droplevels(filter(mat,sp=="Phyllomedusa_nordestina" ))
+  sap <- droplevels(filter(mat1, sp == "Phyllomedusa_nordestina" ))
   
 }
 
 ### Intra-population------------------------------------------------------------
 # Subset for Phyllomedusa nordestina & Phyllomedusa_hypochondrialis
-sap <- droplevels(filter(mat,sp %in% c("Phyllomedusa_nordestina", "Phyllomedusa_hypochondrialis")))
+sap <- droplevels(filter(mat1, sp == "Phyllomedusa_nordestina" ))
 table <- NULL
 table.cv.2 <- NULL
 
@@ -177,12 +176,12 @@ for (j in 1:1000){
   x <- data.frame(level = "intra_pop" ,cv.dur, cv.df, cv.ci, cv.pn, cv.pr, cv.pl)
   table.cv.2 <- rbind(table.cv.2, x)
   table <- NULL
-  sap <-   droplevels(filter(mat,sp %in% c("Phyllomedusa_nordestina", "Phyllomedusa_hypochondrialis")))
+  sap <-   droplevels(filter(mat1, sp == "Phyllomedusa_nordestina" ))
   
 }
 
 ### Intra-individual variation-------
-sap <- mat1
+sap <-  filter(mat1, !sp %in% c("Phyllomedusa_burmeisteri", "Phyllomedusa_vaillantii")) 
 table <- NULL
 table.cv.1 <- NULL
 
@@ -226,7 +225,7 @@ for (j in 1:1000){
   x <- data.frame(level = "intra_ind" ,cv.dur, cv.df, cv.ci, cv.pn, cv.pr, cv.pl)
   table.cv.1 <- rbind(table.cv.1, x)
   table <- NULL
-  sap <- mat1
+  sap <-  filter(mat1, !sp %in% c("Phyllomedusa_burmeisteri", "Phyllomedusa_vaillantii")) 
   
 }
 
@@ -278,8 +277,8 @@ g1 <- ggplot(table.cv.melt, aes(y=value,x=level,fill=level))+
         strip.background = element_rect(
           color = "black", size = 0.5))+
   scale_fill_brewer(palette = 8, labels=c("Intra-individual",
-                                          "Inter-individual",
-                                          "Intra-population",
+                                          "Intra-population*",
+                                          "Inter-population*",
                                           "Intra-species",
                                           "Inter-species")); g1
 
@@ -287,4 +286,3 @@ ggsave(filename = "outputs/figures/Figure_multi_level_cv_analysis.pdf", plot = g
        width = 180, height = 90, units = 'mm')
 ggsave(filename = "outputs/figures/Figure_multi_level_cv_analysis.png", plot = g1, 
        width = 180, height = 90, units = 'mm')
-      

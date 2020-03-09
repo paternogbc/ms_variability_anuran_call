@@ -44,7 +44,7 @@ obj <- phylo.to.map(tree, bra, database = "worldHires",rotate = TRUE,
                   regions = "Brazil", plot = FALSE, type = "phylogram")
 
 cols<-setNames((rainbow(n = Ntip(tree)))[15:1], tree$tip.label)
-pdf(width = 9, height = 9, file = "outputs/figures/supp/Figure_phylo_to_map.pdf")
+pdf(width = 9, height = 9, file = "outputs/figures/supp/SFigure_phylo_to_map.pdf")
 
 plot(obj, direction="rightwards", colors = cols, cex.points=c(0,1.5), rotate = TRUE,
      pts = F, fsize = .8)

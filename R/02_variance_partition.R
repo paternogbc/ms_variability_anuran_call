@@ -101,7 +101,7 @@ g1 <-
     theme(legend.position = "top" , legend.key.size = unit(3, "mm"), 
           legend.text = element_text(size = 5.5),
           legend.spacing = unit(.1, "mm")) +
-    xlab("Acustic parameter")+
+    xlab("Acoustic parameter")+
     ylab("Variance explained (%)") +
     coord_flip(); g1
 
