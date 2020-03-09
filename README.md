@@ -9,12 +9,18 @@ Guilherme F. R. Álvares, Reuber A. Brandão, and Adrian A. Garda_
 
 ![](images/phylogeny.png)
 
+![](images/map_to_phylo.png)
+
 ***
 
-1. To acess the raw data, see [raw_data]().
+# Reproducible analysis
+
+Below you can find the raw data and code to reproduce all analyses included in the manuscript.
+
+1. To acess the raw data, see [raw_data](https://github.com/paternogbc/ms_variability_anuran_call/blob/master/data/raw/raw_data_anuran_call_parameters.csv).
 
 2. To access the source code for the analysis, see 
-[source code]().
+[source code](https://github.com/paternogbc/ms_variability_anuran_call/tree/master/R).
 
 
 ***
