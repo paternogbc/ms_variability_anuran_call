@@ -9,7 +9,11 @@ Guilherme F. R. Álvares, Reuber A. Brandão, and Adrian A. Garda_
 
 ![](images/phylogeny.png)
 
+![](images/map_to_phylo.png)
+
 ***
+
+# Reproducible analysis
 
 1. To acess the raw data, see [raw_data]().
 
