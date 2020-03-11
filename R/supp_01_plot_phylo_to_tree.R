@@ -4,6 +4,7 @@
 library(phytools)
 library(mapdata)
 library(sensiPhy)
+library(tidyverse)
 
 ### Start-----------------------------------------------------------------------
 rm(list = ls())
@@ -44,9 +45,26 @@ obj <- phylo.to.map(tree, bra, database = "worldHires",rotate = TRUE,
                   regions = "Brazil", plot = FALSE, type = "phylogram")
 
 cols<-setNames((rainbow(n = Ntip(tree)))[15:1], tree$tip.label)
-pdf(width = 9, height = 9, file = "outputs/figures/supp/SFigure_phylo_to_map.pdf")
+
+pdf(width = 9, height = 7, file = "outputs/figures/supp/SFigure_phylo_to_map.pdf")
 
 plot(obj, direction="rightwards", colors = cols, cex.points=c(0,1.5), rotate = TRUE,
-     pts = F, fsize = .8)
+     pts = F, fsize = .8, ylim=c(-40, 5), xlim=c(-80, -30),
+     mar=c(5.1,4.1,2.1,2.1))
+
+# add lat + long lines
+long.lines<-seq(-80, 30, by = 10)
+lat.lines<-seq(-40, 10, by = 10)
+axis(1, at=long.lines, labels = paste(long.lines, "°", sep = ""))
+axis(2, at=lat.lines, labels = paste(lat.lines, "°", sep = ""))
+## add gridlines
+for(i in 1:length(lat.lines))
+  lines(c(par()$usr[1],160),rep(lat.lines[i],2),lty="dotted",
+        col="#00000040")
+for(i in 1:length(long.lines))
+  lines(rep(long.lines[i],2),c(par()$usr[3],-10),lty="dotted",
+        col="#00000040")
+title(xlab="Longitude")
+title(ylab="Latitude ")        
 
 dev.off()
