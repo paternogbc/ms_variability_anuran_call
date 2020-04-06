@@ -7,7 +7,10 @@ __Variability in anuran advertisement call: A multi-level study with 15 species 
 _David L. Röhr, Felipe Camurugi, Gustavo B. Paterno, Marcelo Gehara, Flora A. Juncá,
 Guilherme F. R. Álvares, Reuber A. Brandão, and Adrian A. Garda_
 
+See the published article [here](https://www.nrcresearchpress.com/doi/pdf/10.1139/cjz-2020-0018).
+
 See the preprint [here](https://osf.io/gspzc/).
+
 
 ![](images/phylogeny.png)
 
